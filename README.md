@@ -15,11 +15,10 @@ podendo inserir bordas e ajustalas conforme necessário, a aplicação apresenta
 botões onde, um é para a inserção de imagems ou gráficos e o outro para a impressão
 do relatório
 
-## Funcionamento
+# Funcionamento
 
-``
+
 Para a instalação de dependencias eu recomendo fortemente a utilização do Yarn (https://yarnpkg.com/), 
 após a instalação utilize no terminal o comando "yarn", após a instalação das dependencias com o yarn, para evitar imprevistos
 execute também o comando "npm install", após todo o processo de instalação de dependências, execute o comando
 "yarn dev" para inicializar a aplicação
-``
