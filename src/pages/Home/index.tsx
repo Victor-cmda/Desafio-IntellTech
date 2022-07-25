@@ -10,6 +10,7 @@ import { Draggable } from 'drag-react';
 import { Rnd } from "react-rnd";
 import Graphic from '../../Components/Graphics';
 import Footer from '../../Components/Footer';
+import PrintComponents from 'react-print-components';
 
 
 export default function HomePage() {
@@ -41,7 +42,40 @@ export default function HomePage() {
     return (
         <S.Wrapper>
             <S.Container>
-                <Header modal={modal} setModal={setModal} />
+                <Header
+                    Image={
+                        savePhoto ?
+                            <Draggable
+                                style={{
+                                    position: 'absolute',
+                                    zIndex: 0
+                                }}
+                                onDragStart={e => console.log(e)}
+                            >
+                                <S.Image style={{
+                                    height: height,
+                                    width: width,
+                                    borderColor: '#000',
+                                    borderStyle: 'solid',
+                                    borderWidth: borderWidth
+                                }} src={image} />
+                            </Draggable> : null
+
+                    }
+                    Graphic={showGraphic ?
+                        <Rnd
+                            default={{
+                                x: 0,
+                                y: 0,
+                                width: 500,
+                                height: 300,
+                            }}
+                            bounds="window"
+                        >
+                            <Graphic />
+                        </Rnd> : <></>
+                    }
+                    modal={modal} setModal={setModal} />
                 <A4>
                     {savePhoto ?
                         <Draggable
@@ -100,7 +134,7 @@ export default function HomePage() {
                         <S.ContainerModalItem>
                             <FileImageOutlined style={{ fontSize: '60px ' }} />
                             <Typography.Title level={3} style={{ margin: 0 }}>
-                                Imagem
+                                imagem
                             </Typography.Title>
                         </S.ContainerModalItem>
                     </S.UploadC>
@@ -131,6 +165,8 @@ export default function HomePage() {
                 />
             </S.ModalComponent>
 
-        </S.Wrapper>
+
+
+        </S.Wrapper >
     )
 }
