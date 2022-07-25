@@ -17,8 +17,7 @@ do relatório
 
 # Funcionamento
 
-
 Para a instalação de dependencias eu recomendo fortemente a utilização do Yarn (https://yarnpkg.com/), 
 após a instalação utilize no terminal o comando "yarn", após a instalação das dependencias com o yarn, para evitar imprevistos
-execute também o comando "npm install", após todo o processo de instalação de dependências, execute o comando
+execute também o comando "yarn build", para buildar a aplicação, após todo o processo de instalação de dependências, execute o comando
 "yarn dev" para inicializar a aplicação

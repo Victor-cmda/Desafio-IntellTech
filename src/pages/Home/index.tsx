@@ -117,8 +117,8 @@ export default function HomePage() {
                 footer={null}
                 title="Adicionar Componente"
                 visible={modal}
-                onCancel={() => setModal(!modal)}
-            >
+                onCancel={() => setModal(!modal)}>
+                    
                 <S.Row>
                     <S.ContainerModalItem onClick={() => { setModal(!modal), setShowGraphic(!showGraphic) }}>
                         <BarChartOutlined style={{ fontSize: '60px ' }} />
@@ -134,14 +134,12 @@ export default function HomePage() {
                         <S.ContainerModalItem>
                             <FileImageOutlined style={{ fontSize: '60px ' }} />
                             <Typography.Title level={3} style={{ margin: 0 }}>
-                                imagem
+                                Imagem
                             </Typography.Title>
                         </S.ContainerModalItem>
                     </S.UploadC>
                 </S.Row>
             </S.ModalComponent>
-
-
 
             <S.ModalComponent
                 footer={null}
@@ -164,9 +162,6 @@ export default function HomePage() {
                     setSavePhoto={setSavePhoto}
                 />
             </S.ModalComponent>
-
-
-
         </S.Wrapper >
     )
 }
